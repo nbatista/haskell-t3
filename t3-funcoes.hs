@@ -57,3 +57,10 @@ substituir str
 	| str == "u" = "00"
 	| str == "U" = "00"
 	| otherwise = str
+
+
+-- Questão 6
+
+isElem :: Int -> [Int] -> Bool
+isElem _ [] = False
+isElem x lis = any (== x) lis
