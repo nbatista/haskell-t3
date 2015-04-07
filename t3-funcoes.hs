@@ -76,3 +76,14 @@ contVogais str
 
 checaVogal :: Char -> Bool
 checaVogal c = if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') then True else False
+
+
+-- Questão 8
+
+contCons :: String -> Int
+contCons [] = 0
+contCons str = length (filter (checaCons) str)
+
+checaCons :: Char -> Bool
+checaCons c = if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') then False else True
+
