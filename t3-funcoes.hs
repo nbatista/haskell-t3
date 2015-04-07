@@ -6,6 +6,7 @@ import System.IO
 
 
 -- Questão 1
+
 firstName :: String -> String
 firstName [] = []
 firstName str
@@ -14,10 +15,12 @@ firstName str
 
 
 -- Questão 2
+
 firstName' :: String -> String
 firstName' str = takeWhile (/= ' ') str
 
 -- Questão 3
+
 lastName :: String -> String
 lastName [] = []
 lastName str = reverse (lastNameAux str)
@@ -89,6 +92,13 @@ checaCons c = if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') then
 
 
 -- Questão 9
+
 isInt :: String -> Bool
 isInt [] = False
 isInt str = if (length (filter (isLetter) str) > 0) then False else True
+
+
+-- Questão 10
+
+strToInt :: String -> Int
+strToInt str = read str :: Int
