@@ -64,3 +64,15 @@ substituir str
 isElem :: Int -> [Int] -> Bool
 isElem _ [] = False
 isElem x lis = any (== x) lis
+
+
+-- Questão 7
+
+contVogais :: String -> Int
+contVogais [] = 0
+contVogais str 
+ | (checaVogal (head str)) == True = 1 + contVogais (tail str)
+ | otherwise = contVogais (tail str)
+
+checaVogal :: Char -> Bool
+checaVogal c = if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') then True else False
