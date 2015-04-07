@@ -22,3 +22,9 @@ lastNameAux [] = []
 lastNameAux str
 	| last str == ' ' = []
 	| otherwise = last str : lastNameAux (init str)
+
+
+-- Quest�o 4
+
+userName :: String -> String
+userName [] = []
