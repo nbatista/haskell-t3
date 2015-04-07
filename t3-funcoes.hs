@@ -87,3 +87,8 @@ contCons str = length (filter (checaCons) str)
 checaCons :: Char -> Bool
 checaCons c = if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') then False else True
 
+
+-- Questão 9
+isInt :: String -> Bool
+isInt [] = False
+isInt str = if (length (filter (isLetter) str) > 0) then False else True
