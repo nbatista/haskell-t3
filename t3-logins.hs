@@ -28,5 +28,4 @@ main = do
     let strlist = lines strcontent
         strnew = [x ++ "," ++ userName x | x <- strlist]
     writeFile "logins.csv" (unlines strnew)
-	putStrLn "Feito!"
-	outfile = "login.html"
+	
