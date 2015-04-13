@@ -18,10 +18,17 @@ import Data.List
 algum :: Int -> [Int] -> Bool
 algum num lista = any (==num) lista
 
+algumL :: [String] -> [String] -> Bool
+algumL str str1 = any (`elem` str)str1
+
 
 -- Exemplo ALL
 todos :: Int -> [Int] -> Bool
 todos num lista = all (==num) lista
+
+todosL :: [String] -> [String] -> Bool
+todosL str str1 = all (`elem` str)str1
+
 
 
 --Função de alta ordem $
@@ -36,6 +43,8 @@ todos num lista = all (==num) lista
 asso :: [Int] -> Int
 asso num =  sum $ filter (> 10) $ map (*2) num
 
+func :: [Int] -> Bool
+func lista = and $ map (>4) lista
 
 --Função compostas em haskell
 
@@ -43,5 +52,9 @@ asso num =  sum $ filter (> 10) $ map (*2) num
 --http://shuklan.com/haskell/lec06.html#/0/14
 --http://haskell.tailorfontela.com.br/higher-order-functions
 --https://arsphysica.wordpress.com/2011/04/18/haskell1/
+
 comp :: [Int] -> [Int]
 comp num = map (negate . abs) num
+
+comp1 :: [[Int]] -> [Int]
+comp1 lista = map (negate . sum . tail)lista
